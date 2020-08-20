@@ -8,7 +8,7 @@ const Cards = (props) => {
 
     return(
         <div className={styles.container}>
-            <Grid container spacing={3} justify='center'>
+            <Grid container spacing={4} justify='center'>
 
                 <Grid item component={Card}>
                     <CardContent>
@@ -19,7 +19,7 @@ const Cards = (props) => {
                     </CardContent>
                 </Grid>
 
-                {/* <Grid item component={Card}>
+                <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
                         <Typography variant='h5'>REAL DATA</Typography>
@@ -44,7 +44,7 @@ const Cards = (props) => {
                         <Typography color="textSecondary">STATE</Typography>
                         <Typography variant="body2">Some crap</Typography>
                     </CardContent>
-                </Grid> */}
+                </Grid>
 
             </Grid>
         </div>
