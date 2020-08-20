@@ -26,7 +26,7 @@ export const fetchData = async () => {
         try {
           const {data: {state}} = await axios.get(`${url}/state`);  
     
-          return states.map((state) => state.name);
+          return state.map((state) => state.name);
         } catch (error) {
           return error;
         }
