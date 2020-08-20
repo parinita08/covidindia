@@ -14,7 +14,7 @@ const Cards = (props) => {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Infected</Typography>
                         <Typography variant='h5'>REAL DATA</Typography>
-                        <Typography color="textSecondary">STATE</Typography>
+                        {/* <Typography color="textSecondary">STATE</Typography> */}
                         <Typography variant="body2">Some crap</Typography>
                     </CardContent>
                 </Grid>
@@ -23,7 +23,7 @@ const Cards = (props) => {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
                         <Typography variant='h5'>REAL DATA</Typography>
-                        <Typography color="textSecondary">STATE</Typography>
+                        {/* <Typography color="textSecondary">STATE</Typography> */}
                         <Typography variant="body2">Some crap</Typography>
                     </CardContent>
                 </Grid>
@@ -32,7 +32,7 @@ const Cards = (props) => {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Active</Typography>
                         <Typography variant='h5'>REAL DATA</Typography>
-                        <Typography color="textSecondary">STATE</Typography>
+                        {/* <Typography color="textSecondary">STATE</Typography> */}
                         <Typography variant="body2">Some crap</Typography>
                     </CardContent>
                 </Grid>
@@ -41,7 +41,7 @@ const Cards = (props) => {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
                         <Typography variant='h5'>REAL DATA</Typography>
-                        <Typography color="textSecondary">STATE</Typography>
+                        {/* <Typography color="textSecondary">STATE</Typography> */}
                         <Typography variant="body2">Some crap</Typography>
                     </CardContent>
                 </Grid>
