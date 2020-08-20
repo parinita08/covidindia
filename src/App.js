@@ -7,6 +7,14 @@ import DistrictPicker from './Components/DistrictPicker/DistrictPicker';
 class App extends React.Component {
   state ={
     data: {},
+    state: '',
+  }
+
+  handleStateChange = async (state) => {
+    // fetches the data and set the state
+    const fetchedData = await fetchData(state);
+    this.setState({data: fetchedData, state: state});
+    
   }
 
   async componentDidMount() {
@@ -21,7 +29,7 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
          <Cards data={data}/>
-         <StatePicker />    
+         <StatePicker handleStateChange={this.handleStateChange}/>    
          <DistrictPicker />    
          <Chart />
       </div>

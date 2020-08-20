@@ -9,8 +9,6 @@ export const fetchData = async () => {
 
         // return  ret;
         // console.log(ret)
-
-
         // console.log(await axios.get(url))
         const { data :{active, confirmed, deaths, recovered, districtData }  } = await axios.get(url);
 
@@ -18,10 +16,18 @@ export const fetchData = async () => {
         
        console.log(active);
         // console.log(data[0].state)
-        
-        
         // return data
     } catch (error) {
         
     }
-}
+};
+
+    export const fetchState = async () => {
+        try {
+          const {data: {state}} = await axios.get(`${url}/state`);  
+    
+          return states.map((state) => state.name);
+        } catch (error) {
+          return error;
+        }
+    }
