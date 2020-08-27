@@ -2,8 +2,7 @@ import React from 'react';
 import styles from './App.module.css';
 import {Cards, Chart, StatePicker} from './Components';
 import DistrictPicker from './Components/DistrictPicker/DistrictPicker';
-// import {fetchData} from './api';
-// import DistrictPicker from './Components/DistrictPicker/DistrictPicker';
+import BarChart from './Components/Chart/BarChart';
 
 class App extends React.Component {
   
@@ -15,6 +14,7 @@ render() {
          <StatePicker />
          <DistrictPicker />
          <Chart />
+         <BarChart />
       </div>
     );
   }

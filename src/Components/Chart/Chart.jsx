@@ -1,5 +1,6 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
+import styles from './Chart.module.css';
 
 const Chart = () => {
 
@@ -66,9 +67,11 @@ const Chart = () => {
     //     )
 
     return(
+      <div className={styles.container}>
         <Line
             data={data}
         />
+      </div>
     );
 
 }
