@@ -4,6 +4,7 @@ import {Card, CardContent} from '@material-ui/core';
 import {Cards, Chart, StatePicker} from './Components';
 import DistrictPicker from './Components/DistrictPicker/DistrictPicker';
 import BarChart from './Components/Chart/BarChart';
+import './api';
 
 class App extends React.Component {
   
