@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { Select, FormControl, MenuItem} from '@material-ui/core';
-// import { useEffect } from 'react';
 
 const StatePicker = () => {
 
   const [states, setStates] = useState([]);
   const [state, setState] = useState('Country');
+  const [stateInfo, setStateInfo] = useState({});
 
   useEffect(() => {
     // The code inside this will run only once when the component loads and not aagain or when the variable changes.
@@ -27,7 +27,18 @@ const StatePicker = () => {
     const stateCode = event.target.value;
     console.log("WORKSS!", stateCode);
     setState(stateCode);
+
+    const url = stateCode === 'Country' ? 'https://api.covidindiatracker.com/total.json' : `https://api.covidindiatracker.com/state_data/${stateCode}`; 
+
+    await fetch(url)
+    .then(response => response.json())
+    .then( data => {
+      setState(stateCode);
+      setStateInfo(data); //All the data from state response
+    });
   };
+
+  console.log('State info milgaya', stateInfo);
 
     return(
         <FormControl className="styles.formControl">
