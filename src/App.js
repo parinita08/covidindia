@@ -13,22 +13,22 @@ render() {
       <div className={styles.container}>
 
           <div className={styles.leftside}>
-            <div class={styles.header}>
-              <h2>Covid Tracer - India</h2>
-              <Cards />
-              <StatePicker />
-              <DistrictPicker />
-            </div>
-          
-          <Chart />
-          <BarChart />
+              <div class={styles.header}>
+                <h2>Covid Tracer  India</h2>
+                <Cards />
+              </div>
+              
+            <StatePicker />
+            <DistrictPicker />
+            <Chart />
+            <BarChart />
           </div>
 
           <Card className={styles.rightside}>
             <CardContent>
               <h3>Live cases by State</h3>
               <h3>Live cases in the Country</h3>
-              {/* table */}
+              {/* table with state wise cases */}
             </CardContent>
           </Card>
       </div>
