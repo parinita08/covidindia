@@ -8,7 +8,7 @@ const Chart = () => {
         labels: ['Jan', 'Feb', 'March'],
         datasets: [
           {
-            label: 'confirmed',
+            label: 'confirmed', 
             data:  [570,90,410],
             borderColor: 'blue',
             // backgroundColor: 'rgba(89, 0, 255, 0.904)',
