@@ -29,6 +29,7 @@ render() {
               <h3>Live cases by State</h3>
               <h3>Live cases in the Country</h3>
               {/* table with state wise cases */}
+              <h4>Table with state wise cases</h4>
             </CardContent>
           </Card>
       </div>
