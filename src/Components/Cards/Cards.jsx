@@ -19,7 +19,7 @@ const Cards = () => {
                         <Typography variant="h5">
                             {/* <CountUp
                                 start={0}
-                                end={confirmed.value}
+                                end={confirmed}
                                 duration={2.5}
                                 separator=","
                             /> */}

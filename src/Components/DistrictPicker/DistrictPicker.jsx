@@ -13,12 +13,18 @@ const DistrictPicker = () => {
       await fetch("https://api.covidindiatracker.com/state_data.json")
       .then((response) => response.json()) //gets the response in the json format
       .then((data) => {
-        const districts = data.map((district) => ({
+        const districts = data.map((state, index) => {
           // this dosnt work yet : need to know how to fetch district data
-            name: district.districtData.name, 
-            value: district.districtData.name,
-          }));
-        setDistricts(districts);
+            // name: state.districtData[index].name, 
+            // value: state.districtData[index].name,
+            state.districtData.map((district, index) => ({
+              name: district.name, 
+              value: district.name,
+            }));
+            return
+          });
+          console.log(data[0].districtData[0]);       
+          setDistricts(districts);
       });
     };
     getDistrictsData(); //need to call it

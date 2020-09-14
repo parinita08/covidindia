@@ -5,6 +5,7 @@ import {Cards, Chart, StatePicker} from './Components';
 import DistrictPicker from './Components/DistrictPicker/DistrictPicker';
 import BarChart from './Components/Chart/BarChart';
 import './api';
+import './Components/Table/Table';
 
 class App extends React.Component {
   
@@ -20,7 +21,7 @@ render() {
               </div>
               
             <StatePicker />
-            <DistrictPicker />
+            {/* <DistrictPicker /> */}
             <Chart />
             <BarChart />
           </div>
@@ -28,6 +29,7 @@ render() {
           <Card className={styles.rightside}>
             <CardContent>
               <h3>Live cases by State</h3>
+              {/* <Table /> */}
               <h3>Live cases in the Country</h3>
               {/* table with state wise cases */}
               <h4>Table with state wise cases</h4>

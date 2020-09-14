@@ -8,6 +8,14 @@ const StatePicker = () => {
   const [stateInfo, setStateInfo] = useState({});
 
   useEffect(() => {
+    fetch("https://api.covidindiatracker.com/total.json")
+    .then((response) => response.json())
+    .then((data) => {
+      setStateInfo(data);
+    });
+  },[]);
+
+  useEffect(() => {
     // The code inside this will run only once when the component loads and not aagain or when the variable changes.
     // We need to use an async funtion -> sends a request, waits, use the info that the response gives.
     const getStatesData = async () => {
@@ -16,7 +24,7 @@ const StatePicker = () => {
       .then((data) => {
         const states = data.map((state) => ({
             name: state.state,
-          }));
+          }));   
         setStates(states);
       });
     };
@@ -28,7 +36,9 @@ const StatePicker = () => {
     console.log("WORKSS!", stateCode);
     setState(stateCode);
 
-    const url = stateCode === 'Country' ? 'https://api.covidindiatracker.com/total.json' : `https://api.covidindiatracker.com/state_data/${stateCode}`; 
+    const url = stateCode === 'Country' ? 'https://api.covidindiatracker.com/total.json' : `https://api.covidindiatracker.com/state_data/Maharashtra`; 
+
+    
 
     await fetch(url)
     .then(response => response.json())
